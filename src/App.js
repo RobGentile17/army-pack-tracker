@@ -1,25 +1,33 @@
-import logo from './logo.svg';
+import React, { useEffect, useState } from "react"
+import { Switch, Route } from "react-router-dom"
+import NavBar from "./components/NavBar"
+import Home from "./components/Home"
+import Pack from "./components/Pack"
+import MyRucksack from "./components/MyRucksack"
 import './App.css';
 
 function App() {
+    const [page, setPage] = useState("/")
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+        <NavBar onChangePage={setPage} />
+        <Switch>
+            <Route path="/Pack">
+                <Pack />
+            </Route>
+            <Route path="/MyRucksack">
+                <MyRucksack />
+            </Route>
+            <Route exact path="/Home">
+                <Home />
+            </Route>
+            <Route path="*">
+                    <h1>404 not found</h1>
+                </Route>
+        </Switch>
     </div>
-  );
+  )
 }
 
 export default App;

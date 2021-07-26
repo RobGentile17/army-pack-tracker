@@ -1,0 +1,67 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Sleeping Bag",
+      "img_url": "http://www.clker.com/cliparts/a/b/6/6/1194985298157798206sacco_a_pelo_per_campeg_01.svg.med.png",
+      "packed": "false"
+    },
+    {
+      "id": 2,
+      "name": "Tent",
+      "img_url": "http://www.clker.com/cliparts/2/9/e/b/11949839411830050328home13.svg.med.png",
+      "packed": "false"
+    },
+    {
+      "id": 3,
+      "name": "Boots",
+      "img_url": "http://www.clker.com/cliparts/2/5/5/5/11949864361651380699hiking_boot_jarno_vasama_.svg.med.png",
+      "packed": "false"
+    },
+    {
+      "id": 4,
+      "name": "Socks",
+      "img_url": "http://www.clker.com/cliparts/7/b/4/d/1194985207511978749calzettoni.svg.med.png",
+      "packed": "false"
+    },
+    {
+      "id": 5,
+      "name": "Uniform",
+      "img_url": "http://www.clker.com/cliparts/u/O/l/e/u/M/italian-soldier-md.png",
+      "packed": "false"
+    },
+    {
+      "id": 6,
+      "name": "Shovel",
+      "img_url": "http://www.clker.com/cliparts/o/o/i/T/j/y/shovel-md.png",
+      "packed": "false"
+    },
+    {
+      "id": 7,
+      "name": "Gloves",
+      "img_url": "http://www.clker.com/cliparts/A/u/X/C/V/3/gloves-outline-md.png",
+      "packed": "false"
+    },
+    {
+      "id": 8,
+      "name": "Shaving Kit",
+      "img_url": "http://www.clker.com/cliparts/a/e/w/N/2/G/electric-razor-md.png",
+      "packed": "false"
+    },
+    {
+      "id": 9,
+      "name": "Snacks",
+      "img_url": "http://www.clker.com/cliparts/O/v/a/g/y/Z/bag-of-chips-md.png",
+      "packed": "false"
+    },
+    {
+      "id": 10,
+      "name": "Helmet",
+      "img_url": "http://www.clker.com/cliparts/Z/L/k/I/g/J/football-helmet-md.png",
+      "packed": "false"
+    }
+  ]
+}
+
+    
+   
