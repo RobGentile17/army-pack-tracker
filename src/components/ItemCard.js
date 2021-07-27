@@ -1,24 +1,40 @@
 import React, { useState } from "react";
 
-function ItemCard({ item }) {
-  const { name, img_url, packed } = item;
+function ItemCard({ item, allItems, setItems }) {
+  const { id, name, image, packed } = item;
+  const [isPacked, setIsPacked] = useState(item.packed);
+  
 
-  const [isPacked, setIsPacked] = useState(true);
-
-  function handleToggleStock() {
-    setIsPacked((isPacked) => !isPacked);
+  function handleToggleItem() {
+    fetch(`http://localhost:4000/items/${id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({packed: !packed}),
+    })
+      .then((r) => r.json())
+      .then((updatedItem) => {
+        const updatedItems = allItems.map((item) => {
+          if (item.id === updatedItem.id) return updatedItem;
+          return item;
+        });
+        setItems(updatedItems);
+        setIsPacked(!isPacked)
+      });
   }
+
 
   return (
     <li className="card">
-      <img src={img_url} alt={name} />
+      <img src={image} alt={name} />
       <h4>{name}</h4>
       {isPacked ? (
-        <button className="primary" onClick={handleToggleStock}>
-          Packed
+        <button className="primary" onClick={handleToggleItem}>
+          Gear Is Packed!
         </button>
       ) : (
-        <button onClick={handleToggleStock}>Gear has been packed</button>
+        <button onClick={handleToggleItem}>Go Pack Now!</button>
       )}
     </li>
   )

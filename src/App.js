@@ -19,7 +19,7 @@ function App() {
             <Route path="/MyRucksack">
                 <MyRucksack />
             </Route>
-            <Route exact path="/Home">
+            <Route path="/Home">
                 <Home />
             </Route>
             <Route path="*">

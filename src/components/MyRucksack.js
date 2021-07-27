@@ -1,8 +1,11 @@
 import React from "react";
+import RuckSackPage from "./RuckSackPage"
 
 function MyRucksack() {
-    return (
-       <h1>This is where the packed items will be</h1>
+    return(
+      <div className="rucksack cards">
+        <RuckSackPage />
+      </div>
     )
 }
 

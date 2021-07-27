@@ -1,14 +1,16 @@
 import React from "react"
-import Item from "./ItemCard"
+import ItemCard from "./ItemCard"
 
-function ItemList({ items }) {
+function ItemList({ items, allItems, setItems }) {
   return (
     <main>
       <ul className="cards">
         {items.map((item) => (
-          <Item
+          <ItemCard
             key={item.id}
             item={item}
+            allItems={allItems}
+            setItems={setItems}
           />
         ))}
       </ul>
