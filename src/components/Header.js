@@ -5,7 +5,7 @@ function Header() {
     <header>
       <h1>
         <span className="logo" role="img">
-        🇺🇸
+        🇺
         </span>
         The Pack Tracker
       </h1>
