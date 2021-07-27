@@ -25,7 +25,7 @@ function ItemPage() {
         items={displayedItems}
       />
     </main>
-  );
+  )
 }
 
 export default ItemPage;

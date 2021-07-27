@@ -8,7 +8,7 @@ function App() {
       <Header />
       <ItemPage />
     </header>
-  );
+  )
 }
 
 export default App;

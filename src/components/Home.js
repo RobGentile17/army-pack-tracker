@@ -7,7 +7,7 @@ function Home() {
                 Go Pack For The Misson!
             </h1>
         </div>
-    );
+    )
 }
 
 export default Home;

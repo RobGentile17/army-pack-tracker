@@ -13,7 +13,7 @@ function ItemList({ items }) {
         ))}
       </ul>
     </main>
-  );
+  )
 }
 
 export default ItemList

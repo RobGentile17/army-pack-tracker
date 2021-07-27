@@ -13,7 +13,7 @@ function Search({ searchTerm, onSearchChange }) {
       />
       <button type="submit">🔍</button>
     </div>
-  );
+  )
 }
 
 export default Search;

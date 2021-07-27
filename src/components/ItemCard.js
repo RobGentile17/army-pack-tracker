@@ -21,7 +21,7 @@ function ItemCard({ item }) {
         <button onClick={handleToggleStock}>Gear has been packed</button>
       )}
     </li>
-  );
+  )
 }
 
 export default ItemCard;
