@@ -1,7 +1,8 @@
 import React from "react"
 import ItemCard from "./ItemCard"
 
-function ItemList({ items, allItems, setItems }) {
+function ItemList({ items, allItems, setItems, onDeleteItem }) {
+  
   return (
     <main>
       <ul className="cards">
@@ -11,6 +12,7 @@ function ItemList({ items, allItems, setItems }) {
             item={item}
             allItems={allItems}
             setItems={setItems}
+            onDeleteItem={onDeleteItem}
           />
         ))}
       </ul>

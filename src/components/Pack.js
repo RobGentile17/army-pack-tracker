@@ -16,23 +16,39 @@ function Pack() {
           });
       }, []);
 
-    const itemsToDisplay = items.filter((item) => (showPacked ? item.packed:true))
 
+   const itemsToDisplay = () => {
+       if(showPacked) {
+           return items.sort((a, b) => a.name.localeCompare(b.name))
+       } else {
+           return items
+       }
+   }
+    
+    function handleAddItem(newItem) {
+        setItems([...items, newItem]);
+      }
+
+      function handleDeleteItem(id) {
+        const updatedItemArray = items.filter(
+          (item) => item.id !== id
+        );
+        setItems(updatedItemArray);
+      }
+    
   return (
-      <div>
-    <div className="app">
-        
-      <Header />
-      </div>
-      <Filter 
+      <div className="app">
+    <div>
+      <Header 
+        onAddItem={handleAddItem}
         showPacked={showPacked}
-        onChangeShowPacked={setShowPacked}    
-    />
-      <div>
+        onChangeShowPacked={setShowPacked} 
+      />
       <ItemPage 
-        items={itemsToDisplay}
+        items={itemsToDisplay()}
         allItems={items}
         setItems={setItems}
+        onDeleteItem={handleDeleteItem}
       />
       </div>
       </div>

@@ -1,9 +1,18 @@
-import React, { useState } from "react";
+import React, { useState } from "react"
 
-function ItemCard({ item, allItems, setItems }) {
+function ItemCard({ item, allItems, setItems, onDeleteItem }) {
   const { id, name, image, packed } = item;
   const [isPacked, setIsPacked] = useState(item.packed);
   
+  function handleDelete() {
+    fetch(`http://localhost:4000/items/${id}`, {
+      method: "DELETE",
+    })
+      .then((r) => r.json())
+      .then(() => {
+        onDeleteItem(id);
+      });
+  }
 
   function handleToggleItem() {
     fetch(`http://localhost:4000/items/${id}`, {
@@ -26,16 +35,19 @@ function ItemCard({ item, allItems, setItems }) {
 
 
   return (
-    <li className="card">
-      <img src={image} alt={name} />
-      <h4>{name}</h4>
+    <li className="item-card">
+      <img src={image} alt={name} width="100" height="100" />
+      <h2>{name}</h2>
       {isPacked ? (
         <button className="primary" onClick={handleToggleItem}>
-          Gear Is Packed!
+          Gear Has Been Added To Your Rucksack!
         </button>
       ) : (
-        <button onClick={handleToggleItem}>Go Pack Now!</button>
+        <button className="primary" onClick={handleToggleItem}>Pack Your Gear!</button>
       )}
+       <button onClick={handleDelete} className="emoji-button delete">
+          🗑
+        </button>
     </li>
   )
 }

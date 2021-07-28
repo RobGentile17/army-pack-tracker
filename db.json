@@ -4,31 +4,31 @@
       "id": 1,
       "name": "Sleeping Bag",
       "image": "http://www.clker.com/cliparts/a/b/6/6/1194985298157798206sacco_a_pelo_per_campeg_01.svg.med.png",
-      "packed": false
+      "packed": true
     },
     {
       "id": 2,
       "name": "Tent",
       "image": "http://www.clker.com/cliparts/2/9/e/b/11949839411830050328home13.svg.med.png",
-      "packed": false
+      "packed": true
     },
     {
       "id": 3,
       "name": "Boots",
       "image": "http://www.clker.com/cliparts/2/5/5/5/11949864361651380699hiking_boot_jarno_vasama_.svg.med.png",
-      "packed": false
+      "packed": true
     },
     {
       "id": 4,
       "name": "Socks",
       "image": "http://www.clker.com/cliparts/7/b/4/d/1194985207511978749calzettoni.svg.med.png",
-      "packed": false
+      "packed": true
     },
     {
       "id": 5,
       "name": "Uniform",
       "image": "http://www.clker.com/cliparts/u/O/l/e/u/M/italian-soldier-md.png",
-      "packed": false
+      "packed": true
     },
     {
       "id": 6,
@@ -45,7 +45,7 @@
     {
       "id": 8,
       "name": "Shaving Kit",
-      "image": "http://www.clker.com/cliparts/a/e/w/N/2/G/electric-razor-md.png",
+      "image": "http://www.clker.com/cliparts/S/B/e/N/z/v/razor-md.png",
       "packed": false
     },
     {
@@ -61,10 +61,9 @@
       "packed": false
     },
     {
-      "name": "Shirt",
-      "image": "cactus.jpeg",
-      "id": 11,
-      "packed": false
+      "name": "Shooting Glasses",
+      "image": "http://www.clker.com/cliparts/n/N/M/X/x/q/sunglasses-md.png",
+      "id": 11
     }
   ]
 }

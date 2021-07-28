@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ItemList from "./ItemList";
 import Search from "./Search";
 
-function ItemPage({ items, allItems, setItems }) {
+function ItemPage({ items, allItems, setItems, onDeleteItem }) {
   const [searchTerm, setSearchTerm] = useState("");
 
   const displayedItems = items.filter((item) => {
@@ -16,6 +16,7 @@ function ItemPage({ items, allItems, setItems }) {
         items={displayedItems}
         allItems={allItems}
         setItems={setItems}
+        onDeleteItem={onDeleteItem}
       />
     </main>
   )

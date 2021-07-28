@@ -1,14 +1,15 @@
 import React from "react"
 
-const RuckSackCard = ({ name, image}) => {
+const RuckSackCard = ({ name, image }) => {
+  
 
   return (
     <div>
-        <div className="rucksack card">
-          <img src={image} alt={name} />
+        <div className="rucksack-card">
+          <img src={image} alt={name} width="100" height="100" />
         </div>
         <div className="content">
-          <div className="header">{name}</div>
+          <h1 className="header">{name}</h1>
         </div>
     </div>
   );

@@ -16,9 +16,11 @@ const NewItemForm = ({ onAddItem }) => {
         image: image
       }),
     })
-      .then((r) => r.json())
-      .then((newItem) => onAddItem(newItem));
-  }
+    .then((r) => r.json())
+    .then((newItem) => {
+      onAddItem(newItem)
+  })
+}
   return (
     <div className="new-item-form">
       <h1>Add More Gear</h1>
@@ -26,14 +28,14 @@ const NewItemForm = ({ onAddItem }) => {
         <input
           type="text"
           name="name"
-          placeholder="Name of gear"
+          placeholder="Enter name..."
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
         <input
           type="text"
           name="image"
-          placeholder="Picture of gear"
+          placeholder="Enter url..."
           value={image}
           onChange={(e) => setImage(e.target.value)}
         />
