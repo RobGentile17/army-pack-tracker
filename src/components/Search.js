@@ -1,6 +1,6 @@
-import React from "react";
+import React from "react"
 
-function Search({ searchTerm, onSearchChange }) {
+function Search ({ searchTerm, onSearchChange }) {
   return (
     <div className="searchbar">
       <label className="search">Search Gear:</label>
@@ -15,4 +15,4 @@ function Search({ searchTerm, onSearchChange }) {
   )
 }
 
-export default Search;
+export default Search

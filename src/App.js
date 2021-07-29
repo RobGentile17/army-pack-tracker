@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import { Switch, Route } from "react-router-dom"
 import NavBar from "./components/NavBar"
 import Home from "./components/Home"
 import Pack from "./components/Pack"
 import MyRucksack from "./components/MyRucksack"
-import './App.css';
+import "./App.css"
 
-function App() {
-    const [page, setPage] = useState("/")
+function App () {
+  const [page, setPage] = useState("/")
 
   return (
     <div>
@@ -30,4 +30,4 @@ function App() {
   )
 }
 
-export default App;
+export default App

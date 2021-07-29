@@ -1,8 +1,8 @@
 import React from "react"
 import { NavLink } from "react-router-dom"
 
-function NavBar() {
-    return (
+function NavBar () {
+  return (
         <div className="content">
         <nav>
             <NavLink exact to="/home">Home</NavLink>
@@ -10,7 +10,7 @@ function NavBar() {
             <NavLink to="/myrucksack">My Rucksack</NavLink>
         </nav>
         </div>
-    )
+  )
 }
 
-export default NavBar;
+export default NavBar

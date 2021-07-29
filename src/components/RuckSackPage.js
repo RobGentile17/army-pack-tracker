@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import RuckSackCollection from "./RuckSackCollection";
 import RuckSackHeader from "./RuckSackHeader"
+
 function RuckSackPage() {
   const [items, setItems] = useState([]);
 

@@ -1,17 +1,15 @@
 import React from "react"
 
 const Filter = ({ showPacked, onChangeShowPacked }) => {
-
-  function handleTogglePacked(event) {
+  function handleTogglePacked (event) {
     onChangeShowPacked(!showPacked)
   }
 
   return (
 		<div className="filterWrapper">
-			
-				
+
 					<label className="filter">Alphabetical Order</label>
-				
+
 					<input
 						className="toggle"
 						checked={showPacked}
@@ -19,9 +17,7 @@ const Filter = ({ showPacked, onChangeShowPacked }) => {
 						type="checkbox"
 					/>
 				</div>
-		
-		
-	)
-}
-export default Filter;
 
+  )
+}
+export default Filter

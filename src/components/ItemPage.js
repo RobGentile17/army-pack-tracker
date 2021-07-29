@@ -1,13 +1,13 @@
-import React, { useState } from "react";
-import ItemList from "./ItemList";
-import Search from "./Search";
+import React, { useState } from "react"
+import ItemList from "./ItemList"
+import Search from "./Search"
 
-function ItemPage({ items, allItems, setItems, onDeleteItem }) {
-  const [searchTerm, setSearchTerm] = useState("");
+function ItemPage ({ items, allItems, setItems, onDeleteItem }) {
+  const [searchTerm, setSearchTerm] = useState("")
 
   const displayedItems = items.filter((item) => {
-    return item.name.toLowerCase().includes(searchTerm.toLowerCase());
-  });
+    return item.name.toLowerCase().includes(searchTerm.toLowerCase())
+  })
 
   return (
     <main>
@@ -22,4 +22,4 @@ function ItemPage({ items, allItems, setItems, onDeleteItem }) {
   )
 }
 
-export default ItemPage;
+export default ItemPage

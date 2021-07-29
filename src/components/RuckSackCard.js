@@ -1,8 +1,6 @@
 import React from "react"
 
 const RuckSackCard = ({ name, image }) => {
-  
-
   return (
     <div>
         <div className="rucksack-card">
@@ -12,7 +10,7 @@ const RuckSackCard = ({ name, image }) => {
           <h1 className="header">{name}</h1>
         </div>
     </div>
-  );
+  )
 }
- 
-export default RuckSackCard;
+
+export default RuckSackCard

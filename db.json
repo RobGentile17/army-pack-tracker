@@ -65,6 +65,11 @@
       "image": "http://www.clker.com/cliparts/n/N/M/X/x/q/sunglasses-md.png",
       "id": 11,
       "packed": true
+    },
+    {
+      "name": "Water",
+      "image": "http://www.clker.com/cliparts/c/c/6/c/11971145631974357863jonata_Water_bottle.svg.med.png",
+      "id": 12
     }
   ]
 }

@@ -1,50 +1,51 @@
 import React, { useState } from "react"
 
-function ItemCard({ item, allItems, setItems, onDeleteItem }) {
-  const { id, name, image, packed } = item;
-  const [isPacked, setIsPacked] = useState(item.packed);
-  
-  function handleDelete() {
+function ItemCard ({ item, allItems, setItems, onDeleteItem }) {
+  const { id, name, image, packed } = item
+  const [isPacked, setIsPacked] = useState(item.packed)
+
+  function handleDelete () {
     fetch(`http://localhost:4000/items/${id}`, {
-      method: "DELETE",
+      method: "DELETE"
     })
       .then((r) => r.json())
       .then(() => {
-        onDeleteItem(id);
-      });
+        onDeleteItem(id)
+      })
   }
 
-  function handleToggleItem() {
+  function handleToggleItem () {
     fetch(`http://localhost:4000/items/${id}`, {
       method: "PATCH",
       headers: {
-        "Content-Type": "application/json",
+        "Content-Type": "application/json"
       },
-      body: JSON.stringify({packed: !packed}),
+      body: JSON.stringify({ packed: !packed })
     })
       .then((r) => r.json())
       .then((updatedItem) => {
         const updatedItems = allItems.map((item) => {
-          if (item.id === updatedItem.id) return updatedItem;
-          return item;
-        });
-        setItems(updatedItems);
+          if (item.id === updatedItem.id) return updatedItem
+          return item
+        })
+        setItems(updatedItems)
         setIsPacked(!isPacked)
-      });
+      })
   }
-
 
   return (
     <li className="item-card">
       <img className="image" src={image} alt={name} width="100" height="100" />
       <h2>{name}</h2>
-      {isPacked ? (
+      {isPacked
+        ? (
         <button className="primary" onClick={handleToggleItem}>
           Gear Has Been Added To Your Rucksack!
         </button>
-      ) : (
+          )
+        : (
         <button className="primary" onClick={handleToggleItem}>Pack Your Gear!</button>
-      )}
+          )}
        <button onClick={handleDelete} className="emoji-button delete">
           🗑
         </button>
@@ -52,4 +53,4 @@ function ItemCard({ item, allItems, setItems, onDeleteItem }) {
   )
 }
 
-export default ItemCard;
+export default ItemCard

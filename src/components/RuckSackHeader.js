@@ -1,8 +1,8 @@
 import React from "react"
 
 const RuckSackHeader = () => {
-  return (  
-    
+  return (
+
         <header className="header">
           <h1>
             <span className="logo" role="img">
@@ -11,6 +11,6 @@ const RuckSackHeader = () => {
             Your Gear
           </h1>
         </header>
-      )
-    }
-export default RuckSackHeader;
+  )
+}
+export default RuckSackHeader

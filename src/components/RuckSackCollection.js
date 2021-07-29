@@ -2,16 +2,16 @@ import React from "react"
 import RuckSackCard from "./RuckSackCard"
 
 const RuckSackCollection = ({ items }) => {
-  return (  
+  return (
     <ul>
       {items.map((item) => (
-    <RuckSackCard 
+    <RuckSackCard
       key={item.id}
       name={item.name}
       image={item.image}
     />))}
     </ul>
-  );
+  )
 }
- 
-export default RuckSackCollection;
+
+export default RuckSackCollection

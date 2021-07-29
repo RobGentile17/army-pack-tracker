@@ -1,26 +1,26 @@
 import React, { useState } from "react"
 
 const NewItemForm = ({ onAddItem }) => {
-  const[name, setName] = useState("")
+  const [name, setName] = useState("")
   const [image, setImage] = useState("")
 
-  function handleSubmit(e) {
-    e.preventDefault();
+  function handleSubmit (e) {
+    e.preventDefault()
     fetch("http://localhost:4000/items", {
       method: "POST",
       headers: {
-        "Content-Type": "application/json",
+        "Content-Type": "application/json"
       },
       body: JSON.stringify({
         name: name,
         image: image
-      }),
+      })
     })
-    .then((r) => r.json())
-    .then((newItem) => {
-      onAddItem(newItem)
-  })
-}
+      .then((r) => r.json())
+      .then((newItem) => {
+        onAddItem(newItem)
+      })
+  }
   return (
     <div className="new-item-form">
       <h1>Add More Gear</h1>
@@ -42,7 +42,7 @@ const NewItemForm = ({ onAddItem }) => {
         <button type="submit">Add Gear</button>
       </form>
     </div>
-  );
+  )
 }
- 
-export default NewItemForm;
+
+export default NewItemForm

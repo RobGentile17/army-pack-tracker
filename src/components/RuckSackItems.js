@@ -2,7 +2,7 @@ import React from "react"
 import RuckSackCard from "./RuckSackCard"
 
 const RuckSackItems = ({ items }) => {
-  return (  
+  return (
     <ul className="rucksack cards">
       {items.map((item) => {
         return (
@@ -13,7 +13,7 @@ const RuckSackItems = ({ items }) => {
         )
       })}
     </ul>
-  );
+  )
 }
- 
-export default RuckSackItems;
+
+export default RuckSackItems
