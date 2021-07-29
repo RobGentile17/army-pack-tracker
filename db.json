@@ -34,7 +34,7 @@
       "id": 6,
       "name": "Shovel",
       "image": "http://www.clker.com/cliparts/o/o/i/T/j/y/shovel-md.png",
-      "packed": false
+      "packed": true
     },
     {
       "id": 7,
@@ -52,7 +52,7 @@
       "id": 9,
       "name": "Snacks",
       "image": "http://www.clker.com/cliparts/O/v/a/g/y/Z/bag-of-chips-md.png",
-      "packed": false
+      "packed": true
     },
     {
       "id": 10,
@@ -63,7 +63,8 @@
     {
       "name": "Shooting Glasses",
       "image": "http://www.clker.com/cliparts/n/N/M/X/x/q/sunglasses-md.png",
-      "id": 11
+      "id": 11,
+      "packed": true
     }
   ]
 }

@@ -19,7 +19,7 @@ function Pack() {
 
    const itemsToDisplay = () => {
        if(showPacked) {
-           return items.sort((a, b) => a.name.localeCompare(b.name))
+           return [...items].sort((a, b) => a.name.localeCompare(b.name))
        } else {
            return items
        }

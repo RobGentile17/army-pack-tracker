@@ -36,7 +36,7 @@ function ItemCard({ item, allItems, setItems, onDeleteItem }) {
 
   return (
     <li className="item-card">
-      <img src={image} alt={name} width="100" height="100" />
+      <img className="image" src={image} alt={name} width="100" height="100" />
       <h2>{name}</h2>
       {isPacked ? (
         <button className="primary" onClick={handleToggleItem}>

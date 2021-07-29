@@ -11,7 +11,6 @@ function Search({ searchTerm, onSearchChange }) {
         value={searchTerm}
         onChange={(e) => onSearchChange(e.target.value)}
       />
-      <button type="submit">🔍</button>
     </div>
   )
 }
