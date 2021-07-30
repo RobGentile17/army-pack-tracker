@@ -7,7 +7,7 @@ function Pack () {
   const [items, setItems] = useState([])
 
   useEffect(() => {
-    fetch("http://localhost:4000/items")
+    fetch(`${process.env.REACT_APP_API_URL}/items`)
       .then((r) => r.json())
       .then((itemsArray) => {
         setItems(itemsArray)

@@ -1,30 +1,29 @@
-import React, { useEffect, useState } from "react";
-import RuckSackCollection from "./RuckSackCollection";
+import React, { useEffect, useState } from "react"
+import RuckSackCollection from "./RuckSackCollection"
 import RuckSackHeader from "./RuckSackHeader"
 
-function RuckSackPage() {
-  const [items, setItems] = useState([]);
+function RuckSackPage () {
+  const [items, setItems] = useState([])
 
   useEffect(() => {
-    fetch("http://localhost:4000/items")
+    fetch(`${process.env.REACT_APP_API_URL}/items`)
       .then((r) => r.json())
-      .then(setItems);
-  }, []);
+      .then(setItems)
+  }, [])
 
- const itemsToDisplay = items.filter((item) => (item.packed === true))
+  const itemsToDisplay = items.filter((item) => (item.packed === true))
 
- 
   return (
     <div>
       <RuckSackHeader />
       <br />
       <br />
-      <RuckSackCollection  
+      <RuckSackCollection
         items={itemsToDisplay}
       />
       <br />
     </div>
-  );
+  )
 }
 
-export default RuckSackPage;
+export default RuckSackPage

@@ -8,7 +8,7 @@ import "./App.css"
 
 function App () {
   const [page, setPage] = useState("/")
-
+  console.log(page)
   return (
     <div>
         <NavBar onChangePage={setPage} />

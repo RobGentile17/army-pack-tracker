@@ -5,7 +5,7 @@ function ItemCard ({ item, allItems, setItems, onDeleteItem }) {
   const [isPacked, setIsPacked] = useState(item.packed)
 
   function handleDelete () {
-    fetch(`http://localhost:4000/items/${id}`, {
+    fetch(`${process.env.REACT_APP_API_URL}/items/${id}`, {
       method: "DELETE"
     })
       .then((r) => r.json())
@@ -15,7 +15,7 @@ function ItemCard ({ item, allItems, setItems, onDeleteItem }) {
   }
 
   function handleToggleItem () {
-    fetch(`http://localhost:4000/items/${id}`, {
+    fetch(`${process.env.REACT_APP_API_URL}/items/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json"

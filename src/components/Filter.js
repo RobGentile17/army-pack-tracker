@@ -6,17 +6,17 @@ const Filter = ({ showPacked, onChangeShowPacked }) => {
   }
 
   return (
-		<div className="filterWrapper">
+<div className="filterWrapper">
 
-					<label className="filter">Alphabetical Order</label>
+<label className="filter">Alphabetical Order</label>
 
-					<input
-						className="toggle"
-						checked={showPacked}
-						onChange={handleTogglePacked}
-						type="checkbox"
-					/>
-				</div>
+<input
+className="toggle"
+checked={showPacked}
+onChange={handleTogglePacked}
+type="checkbox"
+/>
+</div>
 
   )
 }
